@@ -15,7 +15,7 @@ addBtn.addEventListener("click", function (e) {
   notesObj.push(addTxt.value);
   localStorage.setItem("notes", JSON.stringify(notesObj));
   addTxt.value = "";
-  // console.log(notesObj);
+  console.log(notesObj);
   showNotes();
 });
 
@@ -63,7 +63,7 @@ function deleteNote(index) {
 
 let search=document.getElementById('searchTxt');
 search.addEventListener("input",function(){
-  // console.log('Input event fired!');
+  console.log('Input event fired!');
   let inputVal=search.value.toLowerCase();
   console.log('Input event fired',inputVal)
   let noteCards=document.getElementsByClassName('noteCard');
@@ -75,6 +75,6 @@ search.addEventListener("input",function(){
     else{
       element.style.display="none";
     }
-    // console.log(cardTxt);
+    console.log(cardTxt);
   })
 })
